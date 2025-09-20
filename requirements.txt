@@ -1,0 +1,15 @@
+beautifulsoup4
+bs4
+certifi
+charset-normalizer
+idna
+PyMuPDF
+PyPDF2U
+PySide6
+PySide6_Addons
+PySide6_Essentials
+requests
+shiboken6
+soupsieve
+typing_extensions
+urllib3

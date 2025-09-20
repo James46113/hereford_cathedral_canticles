@@ -45,6 +45,7 @@ def extract_text_with_formatting(page):
             for line in block["lines"]:
                 line_text = ""
                 italic_text = ""
+                bold_text = ""
                 
                 for span in line["spans"]:
                     text = span["text"]
@@ -52,13 +53,17 @@ def extract_text_with_formatting(page):
                     
                     # Flag 2 indicates italic text
                     is_italic = bool(flags & 2)  # bit 1 is italic
+                    # Flag 16 indicates bold text
+                    is_bold = bool(flags & 16)  # bit 4 is bold
                     
                     line_text += text
                     if is_italic and text.strip():
                         italic_text += text
+                    if is_bold and text.strip():
+                        bold_text += text
                 
                 if line_text.strip():
-                    yield line_text.strip(), italic_text.strip()
+                    yield line_text.strip(), italic_text.strip(), bold_text.strip()
 
 def clean_spaced_text(text):
     return text.replace("  ", " ")
@@ -73,6 +78,8 @@ def load_canticles() -> list[Service]:
                 f.write(response.content)
 
     services = []
+    morning_found = False
+    evening_found = False
 
     for pdf_file in os.listdir("pdfs"):
         if pdf_file.lower().endswith(".pdf"):
@@ -85,52 +92,67 @@ def load_canticles() -> list[Service]:
                 # Extract text with formatting information
                 formatted_lines = list(extract_text_with_formatting(page))
                 
-                for ind, (line, italic_text) in enumerate(formatted_lines):
+                for ind, (line, italic_text, bold_text) in enumerate(formatted_lines):
 
-                    if "Evensong" in line.replace(" ", ""):
+                    service_date = start_date + timedelta(days=date_index)
+                    is_sunday = service_date.weekday() == 6  # Sunday is 6
+
+                    if "Evensong" in bold_text.replace(" ", ""):
                         for i in range(1, 10):
                             if ind + i < len(formatted_lines):
-                                next_line, next_italic_text = formatted_lines[ind + i]
+                                next_line, next_italic_text, next_bold_text = formatted_lines[ind + i]
                                 if "service" in next_line.lower().replace(" ", ""):
-                                    services.append(Service(start_date + timedelta(days=date_index), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Evensong"))
+                                    services.append(Service(service_date + timedelta(seconds=2), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Evensong"))
                                     break
                         else:
                             canticles = ""
                             for i in range(1, 10):
                                 if ind + i < len(formatted_lines):
-                                    next_line, next_italic_text = formatted_lines[ind + i]
+                                    next_line, next_italic_text, next_bold_text = formatted_lines[ind + i]
                                     if "magnificat" in next_line.lower().replace(" ", ""):
                                         canticles += clean_spaced_text(next_line.strip()) + ", "
-                                        services.append(Service(start_date + timedelta(days=date_index), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Evensong"))
+                                        services.append(Service(service_date if is_sunday else service_date + timedelta(seconds=2), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Evensong"))
                                     elif "nuncdimittis" in next_line.lower().replace(" ", ""):
-                                        services.append(Service(start_date + timedelta(days=date_index, seconds=1), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Evensong"))
+                                        services.append(Service(service_date + timedelta(seconds=3), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Evensong"))
                                         break
 
-                        date_index += 1
-                    elif "EveningPrayer" in line.strip().replace(" ", ""):
-                        date_index += 1
+                        if not is_sunday:
+                            date_index += 1
+                        else:
+                            evening_found = True
+                    elif "EveningPrayer" in bold_text.strip().replace(" ", ""):
+                        if not is_sunday:
+                            date_index += 1
+                        else:
+                            evening_found = True
 
-                    elif "Matins" in line.replace(" ", ""):
+                    elif "Matins" in bold_text.replace(" ", ""):
                         for i in range(1, 10):
                             if ind + i < len(formatted_lines):
-                                next_line, next_italic_text = formatted_lines[ind + i]
+                                next_line, next_italic_text, next_bold_text = formatted_lines[ind + i]
                                 if "service" in next_line.lower().replace(" ", ""):
-                                    services.append(Service(start_date + timedelta(days=date_index), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Matins"))
+                                    services.append(Service(service_date, clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Matins"))
                                     break
                         else:
                             canticles = ""
                             for i in range(1, 10):
                                 if ind + i < len(formatted_lines):
-                                    next_line, next_italic_text = formatted_lines[ind + i]
+                                    next_line, next_italic_text, next_bold_text = formatted_lines[ind + i]
                                     if "tedeum" in next_line.lower().replace(" ", ""):
                                         canticles += clean_spaced_text(next_line.strip()) + ", "
-                                        services.append(Service(start_date + timedelta(days=date_index), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Matins"))
+                                        services.append(Service(service_date, clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Matins"))
                                     elif "jubilate" in next_line.lower().replace(" ", ""):
-                                        services.append(Service(start_date + timedelta(days=date_index, seconds=1), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Matins"))
+                                        services.append(Service(service_date + timedelta(seconds=1), clean_spaced_text(next_line.strip()).replace(" "+next_italic_text, ""), next_italic_text, "Matins"))
                                         break
+                        morning_found = True
                     
-                    elif "MorningPrayer" in line.strip().replace(" ", ""):
-                        pass
+                    elif "MorningPrayer" in bold_text.strip().replace(" ", ""):
+                        morning_found = True
+
+                    if is_sunday and morning_found and evening_found:
+                            date_index += 1
+                            morning_found = False
+                            evening_found = False
             
             doc.close()
 
