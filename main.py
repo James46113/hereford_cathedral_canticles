@@ -1,6 +1,6 @@
 from canticles import load_canticles
 import sys
-from PySide6 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 from datetime import datetime
 
 def update_table():
