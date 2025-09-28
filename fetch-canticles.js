@@ -33,9 +33,9 @@ const updateCanticles = () => {
             const date = `${now.getDate()} ${now.toLocaleString('en-US', { month: 'long' })}`;
             dateTimeRow.innerHTML = `<td colspan="4">
             <div id="datetime-row">
-                <span id="date">${date}</span>
-                <span id="time">${now.toLocaleTimeString()}</span>
                 <span id="dayOfWeek">${dayOfWeek}</span>
+                <span id="time">${now.toLocaleTimeString()}</span>
+                <span id="date">${date}</span>
             </div>
             </td>`;
             table.appendChild(dateTimeRow);
