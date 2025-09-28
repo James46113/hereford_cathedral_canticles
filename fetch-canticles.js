@@ -46,4 +46,4 @@ const updateCanticles = () => {
 }
 
 updateCanticles()
-setInterval(updateCanticles, 1000)
+setInterval(updateCanticles, 490)
