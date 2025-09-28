@@ -1,3 +1,8 @@
-fetch('')
-.then(response => response.json())
-.then(json_response => console.log(json_response))
+fetch('canticles.json')
+.then(resposne => resposne.json())
+.then(data => {
+    console.log(data)
+})
+.catch(error => {
+    console.error('Error fetching data.')
+})
