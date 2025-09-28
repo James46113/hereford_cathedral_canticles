@@ -40,13 +40,13 @@
     align-items: center;
 }
 
-#dayOfWeek {
-    position: absolute;
-    right: 0;   
-    padding-right: 2.3rem;
+#date {
+position: absolute;
+right: 0;   
+padding-right: 2.3rem;
 }
 
-#date {
+#dayOfWeek {
     position: absolute;
     left: 0;   
     padding-left: 2.3rem;
