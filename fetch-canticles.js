@@ -16,7 +16,6 @@ const updateCanticles = () => {
             const fillRows = () => {
                 const table = document.getElementById('canticles-table');
                 const rowHeight = table.rows[0].offsetHeight || 24;
-                const tableRect = table.getBoundingClientRect();
                 const visibleRows = Math.floor(window.innerHeight / rowHeight)-1;
                 while (table.rows.length < visibleRows) {
                     const emptyRow = document.createElement('tr');
