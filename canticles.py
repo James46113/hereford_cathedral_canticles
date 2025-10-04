@@ -162,9 +162,8 @@ def load_canticles() -> list[Service]:
     unique_services = []
     seen = set()
     for s in services:
-        key = (s.date, s.canticles, s.composer, s.type)
-        if key not in seen:
-            seen.add(key)
+        if s.date not in seen:
+            seen.add(s.date)
             unique_services.append(s)
     services = unique_services
     services.sort(key=lambda x: x.date)
