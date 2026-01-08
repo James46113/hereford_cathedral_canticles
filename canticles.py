@@ -26,6 +26,8 @@ def get_datetime_from_date_range(date_range):
     start_date = ""
     if len(split_date[0]) <= 2:
         start_date = split_date[0] + " " + " ".join(split_date[1].split(" ")[1:])
+    elif split_date[0][-4:].isdigit():
+        start_date = split_date[0]
     else:
         start_date = split_date[0] + " " + split_date[1][-4:]
     return datetime.strptime(start_date, "%d %B %Y")
