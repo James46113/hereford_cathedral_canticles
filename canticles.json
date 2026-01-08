@@ -1,8 +1,20 @@
 [
   {
-    "date": "2025-12-23T00:00:00",
-    "canticles": "Hymnsintheorderofservice",
-    "composer": "",
-    "type": "Matins"
+    "date": "2026-01-08T00:00:02",
+    "canticles": "Service in D",
+    "composer": "Brewer",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-09T00:00:02",
+    "canticles": "Service in fauxbourdon",
+    "composer": "Holmes",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-10T00:00:02",
+    "canticles": "Service in B flat",
+    "composer": "Day",
+    "type": "Evensong"
   }
 ]
