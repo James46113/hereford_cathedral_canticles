@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-01-08T00:00:02",
-    "canticles": "Service in D",
-    "composer": "Brewer",
-    "type": "Evensong"
-  },
-  {
     "date": "2026-01-09T00:00:02",
     "canticles": "Service in fauxbourdon",
     "composer": "Holmes",
@@ -13,8 +7,8 @@
   },
   {
     "date": "2026-01-10T00:00:02",
-    "canticles": "Service in B flat",
-    "composer": "Day",
+    "canticles": "Service in D minor",
+    "composer": "Walmisley",
     "type": "Evensong"
   }
 ]
