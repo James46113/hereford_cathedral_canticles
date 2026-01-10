@@ -1,14 +1,56 @@
 [
   {
-    "date": "2026-01-09T00:00:02",
-    "canticles": "Service in fauxbourdon",
-    "composer": "Holmes",
-    "type": "Evensong"
-  },
-  {
     "date": "2026-01-10T00:00:02",
     "canticles": "Service in D minor",
     "composer": "Walmisley",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-11T00:00:02",
+    "canticles": "Service in F",
+    "composer": "Aston",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-12T00:00:02",
+    "canticles": "Service in E minor",
+    "composer": "Purcell",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-13T00:00:02",
+    "canticles": "First Service",
+    "composer": "Tomkins",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-14T00:00:02",
+    "canticles": "Magnificat Secundi Toni",
+    "composer": "Vivanco",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-14T00:00:03",
+    "canticles": "Nunc dimittis",
+    "composer": "Tone 8",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-15T00:00:02",
+    "canticles": "Service in fauxbourdon",
+    "composer": "Tomkins",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-16T00:00:02",
+    "canticles": "Service in G",
+    "composer": "Sumsion",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-17T00:00:02",
+    "canticles": "Service in E flat No 2",
+    "composer": "Wood",
     "type": "Evensong"
   }
 ]
