@@ -96,6 +96,11 @@ def load_canticles() -> list[Service]:
                 formatted_lines = list(extract_text_with_formatting(page))
                 
                 for ind, (line, italic_text, bold_text) in enumerate(formatted_lines):
+                    days_matched = [day in line.lower().replace(" ", "") for day in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]]
+                    if any(days_matched):
+                        day_of_week = days_matched.index(True)
+                        if day_of_week != service_date.weekday():
+                            date_index += 1
 
                     service_date = start_date + timedelta(days=date_index)
                     is_sunday = service_date.weekday() == 6  # Sunday is 6
