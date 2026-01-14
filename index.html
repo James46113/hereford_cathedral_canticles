@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="fetch-canticles.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <title>Hereford Cathedral Canticles</title>
-        <link id="favIconLink" rel="shortcut icon" type="image/x-icon" href="https://www.herefordcathedral.org/Handlers/GetImage.ashx?IDMF=f03e96d5-03c0-4713-a0d7-8679652efb44&amp;w=80&amp;h=80">
-        <meta name="author" content="James Caroe">
-    </head>
-    <body>
-        <table id="canticles-table">
-            <tr>
-                <th>Date</th>
-                <th>Canticles</th>
-                <th>Composer</th>
-                <th>Service</th>
-            </tr>
-        </table>
-    </body>
+
+<head>
+    <script src="fetch-canticles.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Hereford Cathedral Canticles</title>
+    <link id="favIconLink" rel="shortcut icon" type="image/x-icon"
+        href="https://www.herefordcathedral.org/Handlers/GetImage.ashx?IDMF=f03e96d5-03c0-4713-a0d7-8679652efb44&amp;w=80&amp;h=80">
+    <meta name="author" content="James Caroe">
+</head>
+
+<body>
+    <table id="canticles-table">
+        <tr>
+            <th>Date</th>
+            <th>Canticles</th>
+            <th>Composer</th>
+            <th>Service</th>
+        </tr>
+    </table>
+</body>
+
 </html>
+
+<script>
+    function reloadAtMidnight() {
+        const now = new Date();
+        const midnight = new Date();
+        midnight.setHours(24, 0, 0, 0);
+        const timeUntilMidnight = midnight - now;
+
+        setTimeout(() => {
+            location.reload();
+        }, timeUntilMidnight);
+    }
+
+    reloadAtMidnight();
+</script>
