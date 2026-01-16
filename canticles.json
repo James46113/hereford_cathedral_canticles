@@ -1,17 +1,5 @@
 [
   {
-    "date": "2026-01-15T00:00:02",
-    "canticles": "Magnificat Secundi Toni",
-    "composer": "Vivanco",
-    "type": "Evensong"
-  },
-  {
-    "date": "2026-01-15T00:00:03",
-    "canticles": "Nunc dimittis",
-    "composer": "Tone 8",
-    "type": "Evensong"
-  },
-  {
     "date": "2026-01-16T00:00:02",
     "canticles": "Service in fauxbourdon",
     "composer": "Tomkins",
