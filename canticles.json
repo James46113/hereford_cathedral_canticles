@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-01-16T00:00:02",
-    "canticles": "Service in fauxbourdon",
-    "composer": "Tomkins",
-    "type": "Evensong"
-  },
-  {
     "date": "2026-01-17T00:00:02",
     "canticles": "Service in G",
     "composer": "Sumsion",
@@ -15,6 +9,42 @@
     "date": "2026-01-18T00:00:02",
     "canticles": "Service in E flat No 2",
     "composer": "Wood",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-19T00:00:02",
+    "canticles": "Service in A",
+    "composer": "Noble",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-20T00:00:02",
+    "canticles": "Short Service",
+    "composer": "Byrd",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-22T00:00:02",
+    "canticles": "Service in E",
+    "composer": "Wood",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-23T00:00:02",
+    "canticles": "Service in fauxbourdon",
+    "composer": "Tallis",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-24T00:00:02",
+    "canticles": "Jesus College Service",
+    "composer": "Mathias",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-01-25T00:00:02",
+    "canticles": "St Paul\u2019s Service",
+    "composer": "Howells",
     "type": "Evensong"
   }
 ]
