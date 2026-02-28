@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-02-27T00:00:02",
-    "canticles": "Service in fauxbourdon",
-    "composer": "Byrd",
-    "type": "Evensong"
-  },
-  {
     "date": "2026-02-28T00:00:02",
     "canticles": "Service in E flat no 2",
     "composer": "Wood",
@@ -15,6 +9,54 @@
     "date": "2026-03-01T00:00:02",
     "canticles": "Service in A flat",
     "composer": "Harwood",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-03-02T00:00:02",
+    "canticles": "Service in F",
+    "composer": "Aston",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-03-03T00:00:02",
+    "canticles": "Service in G",
+    "composer": "Wood",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-03-05T00:00:02",
+    "canticles": "Service in E minor",
+    "composer": "Purcell",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-03-06T00:00:02",
+    "canticles": "Service in fauxbourdon",
+    "composer": "Morley",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-03-07T00:00:02",
+    "canticles": "Magnificat Sexti Toni",
+    "composer": "Victoria",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-03-07T00:00:03",
+    "canticles": "Nunc Dimittis Tertii Toni",
+    "composer": "Victoria",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-03-08T00:00:01",
+    "canticles": "Jubilate in F",
+    "composer": "Ireland",
+    "type": "Matins"
+  },
+  {
+    "date": "2026-03-08T00:00:02",
+    "canticles": "Service in G",
+    "composer": "Sumsion",
     "type": "Evensong"
   }
 ]
