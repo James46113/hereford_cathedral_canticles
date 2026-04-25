@@ -1,8 +1,56 @@
 [
   {
-    "date": "2026-03-29T00:00:02",
-    "canticles": "Short Service",
-    "composer": "Gibbons",
+    "date": "2026-04-26T00:00:00",
+    "canticles": "Service in C",
+    "composer": "Stanford",
+    "type": "Matins"
+  },
+  {
+    "date": "2026-04-26T00:00:02",
+    "canticles": "Magdalen Service",
+    "composer": "Leighton",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-04-27T00:00:02",
+    "canticles": "Service in G",
+    "composer": "Sumsion",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-04-28T00:00:02",
+    "canticles": "Service in B flat",
+    "composer": "Purcell",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-04-30T00:00:02",
+    "canticles": "First Service",
+    "composer": "Moore",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-05-01T00:00:02",
+    "canticles": "Service in F",
+    "composer": "Aston",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-05-02T00:00:02",
+    "canticles": "Service in B minor",
+    "composer": "Noble",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-05-03T00:00:00",
+    "canticles": "ServiceinFIreland",
+    "composer": "",
+    "type": "Matins"
+  },
+  {
+    "date": "2026-05-03T00:00:02",
+    "canticles": "Service in D",
+    "composer": "Brewer",
     "type": "Evensong"
   }
 ]
