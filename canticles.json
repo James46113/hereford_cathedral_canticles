@@ -1,17 +1,5 @@
 [
   {
-    "date": "2026-05-03T00:00:00",
-    "canticles": "ServiceinFIreland",
-    "composer": "",
-    "type": "Matins"
-  },
-  {
-    "date": "2026-05-03T00:00:02",
-    "canticles": "Service in D",
-    "composer": "Brewer",
-    "type": "Evensong"
-  },
-  {
     "date": "2026-05-05T00:00:02",
     "canticles": "Service in F",
     "composer": "Ireland",
