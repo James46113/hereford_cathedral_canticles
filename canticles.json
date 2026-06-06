@@ -1,20 +1,62 @@
 [
   {
-    "date": "2026-05-08T00:00:02",
-    "canticles": "Short Service",
-    "composer": "Ayleward",
+    "date": "2026-06-06T00:00:02",
+    "canticles": "Service in G",
+    "composer": "Jackson",
     "type": "Evensong"
   },
   {
-    "date": "2026-05-09T00:00:02",
-    "canticles": "Gloucester Service",
-    "composer": "Briggs",
+    "date": "2026-06-07T00:00:00",
+    "canticles": "Service in D",
+    "composer": "Brewer",
+    "type": "Matins"
+  },
+  {
+    "date": "2026-06-07T00:00:02",
+    "canticles": "Service in D",
+    "composer": "Brewer",
     "type": "Evensong"
   },
   {
-    "date": "2026-05-10T00:00:02",
-    "canticles": "St Paul\u2019s Service",
-    "composer": "Howells",
+    "date": "2026-06-08T00:00:02",
+    "canticles": "Service in E Minor",
+    "composer": "D Purcell",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-06-09T00:00:02",
+    "canticles": "Fourth Service",
+    "composer": "Batten",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-06-11T00:00:02",
+    "canticles": "Service in F",
+    "composer": "Wise",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-06-12T00:00:02",
+    "canticles": "Service in fauxbourdon",
+    "composer": "Reid",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-06-13T00:00:02",
+    "canticles": "Service in D",
+    "composer": "Dyson",
+    "type": "Evensong"
+  },
+  {
+    "date": "2026-06-14T00:00:00",
+    "canticles": "Service in C",
+    "composer": "Stanford",
+    "type": "Matins"
+  },
+  {
+    "date": "2026-06-14T00:00:02",
+    "canticles": "Hymnsandpsalmsintheorderofservice",
+    "composer": "",
     "type": "Evensong"
   }
 ]
